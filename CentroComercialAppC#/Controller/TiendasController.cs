@@ -14,26 +14,34 @@ namespace CentroComercialAppC_.Controllers
             _context = context;
         }
 
+        // GET: Tiendas
         public async Task<IActionResult> Index()
         {
             return View(await _context.Tiendas.ToListAsync());
         }
 
+        // GET: Tiendas/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
-            var tienda = await _context.Tiendas.FirstOrDefaultAsync(m => m.Id == id);
-            if (tienda == null) return NotFound();
+            var tienda = await _context.Tiendas
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (tienda == null)
+                return NotFound();
 
             return View(tienda);
         }
 
+        // GET: Tiendas/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: Tiendas/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Categoria,Ubicacion,Horario")] Tienda tienda)
@@ -47,21 +55,26 @@ namespace CentroComercialAppC_.Controllers
             return View(tienda);
         }
 
+        // GET: Tiendas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
             var tienda = await _context.Tiendas.FindAsync(id);
-            if (tienda == null) return NotFound();
+            if (tienda == null)
+                return NotFound();
 
             return View(tienda);
         }
 
+        // POST: Tiendas/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Categoria,Ubicacion,Horario")] Tienda tienda)
         {
-            if (id != tienda.Id) return NotFound();
+            if (id != tienda.Id)
+                return NotFound();
 
             if (ModelState.IsValid)
             {
@@ -72,24 +85,32 @@ namespace CentroComercialAppC_.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!TiendaExists(tienda.Id)) return NotFound();
-                    else throw;
+                    if (!TiendaExists(tienda.Id))
+                        return NotFound();
+                    else
+                        throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(tienda);
         }
 
+        // GET: Tiendas/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null) return NotFound();
+            if (id == null)
+                return NotFound();
 
-            var tienda = await _context.Tiendas.FirstOrDefaultAsync(m => m.Id == id);
-            if (tienda == null) return NotFound();
+            var tienda = await _context.Tiendas
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (tienda == null)
+                return NotFound();
 
             return View(tienda);
         }
 
+        // POST: Tiendas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
