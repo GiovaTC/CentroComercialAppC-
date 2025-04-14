@@ -33,8 +33,6 @@ cd CentroComercialApp
 Edita appsettings.json:
 
 json
-Copiar
-Editar
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=CentroComercialDB;Trusted_Connection=True;TrustServerCertificate=True;"
 }
@@ -42,8 +40,6 @@ Editar
 Models/Tienda.cs
 
 csharp
-Copiar
-Editar
 namespace CentroComercialApp.Models
 {
     public class Tienda
@@ -59,8 +55,6 @@ namespace CentroComercialApp.Models
 Data/CentroComercialContext.cs
 
 csharp
-Copiar
-Editar
 using Microsoft.EntityFrameworkCore;
 using CentroComercialApp.Models;
 
@@ -79,14 +73,10 @@ namespace CentroComercialApp.Data
 Registra el contexto en Program.cs:
 
 csharp
-Copiar
-Editar
 builder.Services.AddDbContext<CentroComercialContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 📦 Paso 5: Generar controlador y vistas CRUD
 bash
-Copiar
-Editar
 dotnet aspnet-codegenerator controller -name TiendasController -m Tienda -dc CentroComercialContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
 Esto generará:
 
@@ -128,6 +118,8 @@ Visual Studio o VS Code con extensiones de C#
 📄 Licencia
 Este proyecto está bajo la licencia MIT. Puedes hacer con él lo que quieras, solo no olvides dar crédito. 😉
 
+----------//---------//----------//-------
+
 Vamos a hacerlo manualmente 👨‍💻
 
 Tú ya tienes:
@@ -156,8 +148,7 @@ Delete (eliminar)
 Crea un archivo llamado TiendasController.cs dentro de la carpeta Controllers:
 
 csharp
-Copiar
-Editar
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CentroComercialApp.Data;
@@ -275,8 +266,7 @@ Crea una carpeta dentro de Views llamada Tiendas, y dentro coloca estos archivos
 
 📄 Index.cshtml
 cshtml
-Copiar
-Editar
+
 @model IEnumerable<CentroComercialApp.Models.Tienda>
 
 @{
@@ -317,8 +307,7 @@ Editar
 </table>
 📄 Create.cshtml
 cshtml
-Copiar
-Editar
+
 @model CentroComercialApp.Models.Tienda
 
 @{
@@ -350,8 +339,7 @@ Editar
 </form>
 📄 Edit.cshtml
 cshtml
-Copiar
-Editar
+
 @model CentroComercialApp.Models.Tienda
 
 @{
@@ -384,8 +372,7 @@ Editar
 </form>
 📄 Details.cshtml
 cshtml
-Copiar
-Editar
+
 @model CentroComercialApp.Models.Tienda
 
 @{
@@ -416,8 +403,7 @@ Editar
 <a asp-action="Index" class="btn btn-secondary">Volver</a>
 📄 Delete.cshtml
 cshtml
-Copiar
-Editar
+
 @model CentroComercialApp.Models.Tienda
 
 @{
