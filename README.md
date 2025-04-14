@@ -1,12 +1,20 @@
 # CentroComercialAppC#
 
+![image](https://github.com/user-attachments/assets/c7ab3088-42f3-45d5-9c9a-cbb04a53f2db)
+
 ![image](https://github.com/user-attachments/assets/919d9162-e65a-4203-864f-f27cfe389ad4)
 
-![image](https://github.com/user-attachments/assets/c7ab3088-42f3-45d5-9c9a-cbb04a53f2db)
+![image](https://github.com/user-attachments/assets/e6a72ac5-da52-4ecb-914b-6560ba963e1a)
+
+![image](https://github.com/user-attachments/assets/ff5e8ee4-c25d-4d01-b354-cc4dd6d866c1)
+
+![image](https://github.com/user-attachments/assets/9efd03f1-666d-485a-bea4-a97bb4aeca5a)
 
 ![image](https://github.com/user-attachments/assets/86b37cb0-0e06-4200-87f3-248a4a357d72)
 
 ![image](https://github.com/user-attachments/assets/c9d042ee-f238-4c35-ac88-54b985a5bbdc)
+
+![image](https://github.com/user-attachments/assets/9210c506-df41-4474-919a-9de561e491cd)
 
 # 🏬 Centro Comercial App
 
@@ -435,3 +443,4 @@ cshtml
         <dt class="col-sm-2">Horario</dt>
         <dd class="col-sm-10">@Model.Horario</dd>
     </dl>
+</div>
