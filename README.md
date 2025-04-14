@@ -1,5 +1,7 @@
 # CentroComercialAppC#
 
+![image](https://github.com/user-attachments/assets/1549d1b1-222e-40a8-a4ac-1926944d8741)
+
 ![image](https://github.com/user-attachments/assets/c7ab3088-42f3-45d5-9c9a-cbb04a53f2db)
 
 ![image](https://github.com/user-attachments/assets/919d9162-e65a-4203-864f-f27cfe389ad4)
