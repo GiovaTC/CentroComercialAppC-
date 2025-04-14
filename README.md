@@ -437,3 +437,4 @@ cshtml
         <dt class="col-sm-2">Horario</dt>
         <dd class="col-sm-10">@Model.Horario</dd>
     </dl>
+</div>
