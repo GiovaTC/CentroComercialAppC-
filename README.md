@@ -8,6 +8,8 @@
 
 ![image](https://github.com/user-attachments/assets/c9d042ee-f238-4c35-ac88-54b985a5bbdc)
 
+![image](https://github.com/user-attachments/assets/9210c506-df41-4474-919a-9de561e491cd)
+
 # 🏬 Centro Comercial App
 
 Una aplicación web desarrollada en **ASP.NET Core 8.0** para la gestión de un centro comercial. Permite visualizar, crear, actualizar y eliminar tiendas, así como administrar información relevante como horarios, categorías y ubicación.
