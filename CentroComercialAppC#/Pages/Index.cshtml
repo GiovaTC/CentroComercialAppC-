@@ -1,10 +1,40 @@
 ﻿@page
-@model IndexModel
+@model IEnumerable<CentroComercialAppC_.Models.Tienda>
+
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Tiendas";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Lista de Tiendas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Ubicación</th>
+            <th>Horario</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Categoria</td>
+                <td>@item.Ubicacion</td>
+                <td>@item.Horario</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

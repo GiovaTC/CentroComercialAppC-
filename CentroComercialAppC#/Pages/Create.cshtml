@@ -1,0 +1,29 @@
+﻿@model CentroComercialAppC_.Models.Tienda
+
+@{
+    ViewData["Title"] = "Crear Tienda";
+}
+
+<h1>Crear Tienda</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Nombre" class="control-label"></label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Categoria" class="control-label"></label>
+        <input asp-for="Categoria" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Ubicacion" class="control-label"></label>
+        <input asp-for="Ubicacion" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Horario" class="control-label"></label>
+        <input asp-for="Horario" class="form-control" />
+    </div>
+    <br />
+    <input type="submit" value="Crear" class="btn btn-success" />
+    <a asp-action="Index" class="btn btn-secondary">Volver</a>
+</form>

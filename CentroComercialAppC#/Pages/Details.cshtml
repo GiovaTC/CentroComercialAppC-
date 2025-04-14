@@ -1,0 +1,29 @@
+﻿@page
+@model CentroComercialAppC_.Models.Tienda
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1>Detalles de Tienda</h1>
+
+<div>
+    <h4>Tienda</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Nombre</dd>
+
+        <dt class="col-sm-2">Categoría</dt>
+        <dd class="col-sm-10">@Model.Categoria</dd>
+
+        <dt class="col-sm-2">Ubicación</dt>
+        <dd class="col-sm-10">@Model.Ubicacion</dd>
+
+        <dt class="col-sm-2">Horario</dt>
+        <dd class="col-sm-10">@Model.Horario</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
+<a asp-action="Index" class="btn btn-secondary">Volver</a>

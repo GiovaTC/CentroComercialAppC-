@@ -1,0 +1,31 @@
+﻿@page
+@model CentroComercialAppC_.Models.Tienda
+
+@{
+    ViewData["Title"] = "Editar Tienda";
+}
+
+<h1>Editar Tienda</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Categoria"></label>
+        <input asp-for="Categoria" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Ubicacion"></label>
+        <input asp-for="Ubicacion" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Horario"></label>
+        <input asp-for="Horario" class="form-control" />
+    </div>
+    <br />
+    <input type="submit" value="Guardar" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
